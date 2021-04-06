@@ -1,6 +1,8 @@
 NAME 			= test
 LIBFT_PATH 		= ./libft
-SRCS 			= main.c
+SRCS 			= main.c \
+					what_key.c \
+					utils_termcap.c
 
 OBJS			= ${SRCS:.c=.o}
 INCLUDE 		= include/test.h
@@ -18,7 +20,7 @@ $(NAME):		${OBJS}
 clean:			libft_clean
 				@${RM} ${OBJS}
 fclean:			libft_fclean clean
-				@${RM} ${NAME} ./minishell_history.txt
+				@${RM} ${NAME} ./.minishell_history.txt
 re:				fclean all
 
 # In this last section we make other makefiles compile with the -C flag
